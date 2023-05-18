@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 600px;
+}
+.title{
+    color: #515151;
+}
+.data p{
+    font-size: 1.3rem;
+    text-align: justify;
+    color: #575757;
+}
+.columns {
+    background-color: #eee;
+    width: 20%;
+    border-radius: 3px;
+    margin: 30px;
+    transition: border 0.3s, transform 0.3s; /* Add transition to all properties */
+}
+
+.price {
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+.columns li {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #b7b6b6;
+}
+
+.basic {
+    background-color: rgb(43, 43, 43);
+    color: white;
+    font-size: 25px;
+}
+
+.grey {
+    background-color: #dfdcdc;
+    font-size: 20px;
+}
+
+.price .btn {
+    background-color: #2cb885;
+    cursor: pointer;
+}
+
+.price a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: block;
+}
+
+.columns:hover {
+    transform: scale(1.05); /* Zoom up by 5% */
+}
+
+.columns:not(:hover) {
+    border: 0; /* Remove the border when not hovering */
+    transform: scale(1); /* Restore the normal scale */
+}
+
+.columns::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+@media (max-width: 1200px) {
+    .container {
+        padding: 30px;
+    }
+
+    .columns {
+        width: 40%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 20px;
+    }
+
+    .columns {
+        width: 50%;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .columns {
+        width: 70%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 5px;
+    }
+
+    .columns {
+        width: 90%;
+        margin: 5px;
+    }
+}
